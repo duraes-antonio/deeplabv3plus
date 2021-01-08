@@ -46,9 +46,9 @@ python "${WORK_DIR}"/eval.py \
     --atrous_rates=18 \
     --output_stride=16 \
     --decoder_output_stride=4 \
-    --eval_crop_size="384,640" \
+    --eval_crop_size="512,512" \
     --dataset="winter_city" \
     --checkpoint_dir="${TRAIN_LOGDIR}" \
     --eval_logdir="${EVAL_LOGDIR}" \
-    --dataset_dir="${CURRENT_DATASET}" 
+    --dataset_dir="${CURRENT_DATASET}" \
     --max_number_of_evaluations=1

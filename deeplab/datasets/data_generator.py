@@ -101,11 +101,11 @@ _ADE20K_INFORMATION = DatasetDescriptor(
 
 _WINTER_CITY_INFORMATION = DatasetDescriptor(
     splits_to_sizes={
-        'train': 1965, # num of train samples
-        'val': 840, # num of validation samples
-        'test': 1163, # num of test samples
+        'train': 938, # num of train samples
+        'val': 469, # num of validation samples
+        # 'test': 1163, # num of test samples
     },
-    num_classes=12, # number of classes
+    num_classes=4, # number of classes
     ignore_label=255, # by default
 )
 

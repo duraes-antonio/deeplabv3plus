@@ -39,6 +39,14 @@ CURRENT_DATASET="${WORK_DIR}/${DATASET_DIR}/${DATA_FOLDER}/tfrecord"
 
 
 NUM_ITERATIONS=10000
+
+#  --learning_rate_decay_step=200 \
+#  --weight_decay=0.00001 \
+#  --save_interval_secs=300 \
+#  --save_summaries_secs=300 \
+#  --tf_initial_checkpoint="${INIT_FOLDER}/deeplabv3_cityscapes_train/model.ckpt" \
+
+
 python "${WORK_DIR}"/train.py \
   --logtostderr \
   --train_split="train" \
@@ -48,18 +56,13 @@ python "${WORK_DIR}"/train.py \
   --atrous_rates=18 \
   --output_stride=16 \
   --decoder_output_stride=4 \
-  --train_crop_size="384,640" \
+  --train_crop_size="512,512" \
   --train_batch_size=8 \
-  --base_learning_rate=0.005 \
-  --learning_rate_decay_step=200 \
-  --weight_decay=0.00001 \
-  --save_interval_secs=300 \
-  --save_summaries_secs=300 \
+  --base_learning_rate=0.0001 \
   --training_number_of_steps="${NUM_ITERATIONS}" \
   --log_steps=20 \
   --fine_tune_batch_norm=true \
   --dataset="winter_city" \
-  --tf_initial_checkpoint="${INIT_FOLDER}/deeplabv3_cityscapes_train/model.ckpt" \
   --initialize_last_layer=false \
   --last_layers_contain_logits_only=true \
   --train_logdir="${TRAIN_LOGDIR}" \

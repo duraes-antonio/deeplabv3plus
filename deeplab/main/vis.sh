@@ -27,7 +27,7 @@ DATA_FOLDER="winter_city"
 
 EXP_FOLDER="exp/results_cityscapes_384_640_8"
 
-INIT_FOLDER="${WORK_DIR}/${DATASET_DIR}/init_models"
+#INIT_FOLDER="${WORK_DIR}/${DATASET_DIR}/init_models"
 TRAIN_LOGDIR="${WORK_DIR}/${DATASET_DIR}/${DATA_FOLDER}/${EXP_FOLDER}/train"
 VIS_LOGDIR="${WORK_DIR}/${DATASET_DIR}/${DATA_FOLDER}/${EXP_FOLDER}/vis"
 
@@ -46,7 +46,7 @@ python "${WORK_DIR}"/vis.py \
   --atrous_rates=18 \
   --output_stride=16 \
   --decoder_output_stride=4 \
-  --vis_crop_size="384,640" \
+  --vis_crop_size="512,512" \
   --dataset="winter_city" \
   --colormap_type="winter_city" \
   --checkpoint_dir="${TRAIN_LOGDIR}" \

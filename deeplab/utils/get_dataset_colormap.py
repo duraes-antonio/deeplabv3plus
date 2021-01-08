@@ -48,7 +48,7 @@ _DATASET_MAX_ENTRIES = {
     _CITYSCAPES: 256,
     _MAPILLARY_VISTAS: 66,
     _PASCAL: 512,
-    _WINTER_CITY: 12,
+    _WINTER_CITY: 4,
 }
 
 def create_winter_city_label_colormap():
@@ -58,18 +58,10 @@ def create_winter_city_label_colormap():
     A colormap for visualizing segmentation results.
   """
   colormap = np.zeros((256, 3), dtype=np.uint8)
-  colormap[0] = [0, 0, 0]
-  colormap[1] = [255, 255, 0]
-  colormap[2] = [0, 0, 255]
-  colormap[3] = [255, 193, 255]
-  colormap[4] = [255, 0, 128]
-  colormap[5] = [255, 153, 204] 
-  colormap[6] = [37, 193, 255]    
-  colormap[7] = [255, 85, 128]
-  colormap[8] = [255, 128, 0] 
-  colormap[9] = [200, 150, 180] 
-  colormap[10] = [255, 0, 255]
-  colormap[11] = [255, 206, 135]
+  colormap[0] = [1, 1, 1]
+  colormap[1] = [128, 192, 0]
+  colormap[2] = [128, 192, 128]
+  colormap[3] = [128, 64, 128]
 
   return colormap
     
