@@ -374,7 +374,10 @@ def main(unused_argv):
           FLAGS.slow_start_learning_rate,
           decay_steps=FLAGS.decay_steps,
           end_learning_rate=FLAGS.end_learning_rate)
-
+      print('---> learning_rate', learning_rate)
+      print('---> optimizer', FLAGS.optimizer)
+      print('---> train_batch_size', FLAGS.train_batch_size)
+      print('---> train_crop_size', FLAGS.train_crop_size)
       summaries.add(tf.summary.scalar('learning_rate', learning_rate))
 
       if FLAGS.optimizer == 'momentum':
@@ -443,7 +446,6 @@ def main(unused_argv):
             FLAGS.initialize_last_layer,
             last_layers,
             ignore_missing_vars=True)
-
       slim.learning.train(
           train_tensor,
           logdir=FLAGS.train_logdir,
