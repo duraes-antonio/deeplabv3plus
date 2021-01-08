@@ -38,7 +38,7 @@ cd "${CURRENT_DIR}"
 CURRENT_DATASET="${WORK_DIR}/${DATASET_DIR}/${DATA_FOLDER}/tfrecord"
 
 
-NUM_ITERATIONS=10000
+NUM_ITERATIONS=40000
 
 #  --learning_rate_decay_step=200 \
 #  --weight_decay=0.00001 \
